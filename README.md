@@ -46,6 +46,20 @@ Click here to deploy your bot to heroku
   
   **Do NOT commit these to Git, they are SECRETS!**
 
+## Running as a Docker container
+
+1. Install [docker](https://www.docker.com/) for your system. 
+2. Clone this repo to your machine. 
+3. Edit and rename the `./.env.template` file as described above.
+4. Build the docker image by running the following:
+   ```bash
+   docker build -t twitch-spotify-request-bot .
+   ```
+5. Start the bot with the following command:
+   ```bash
+   docker run twitch-spotify-request-bot:latest -d -p 8000:8000 --name 'whatever_you_want'
+   ```
+   
 ## Prerequisites for running locally
 
 - Some basic programming knowledge (running terminal commands and editing `.env`
